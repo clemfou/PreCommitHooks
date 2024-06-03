@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pre-commit-hooks"
+version = "0.0.0"
+description = "Dummy package"
+authors = ["Clemfou <clemfou@email.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.scripts]
+generic-check-for-binary-files = "pre_commit_hooks.generic_check_for_binary_files:main"
+generic-fix-end-of-files = "pre_commit_hooks.generic_fix_end_of_files:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

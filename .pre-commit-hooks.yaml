@@ -1,0 +1,36 @@
+---
+
+- id: generic-trailing-whitespaces
+  name: '[Generic] Remove trailing whitespaces'
+  description: >
+    Remove trailing whitespaces from all files.
+  language: system
+  files: .*
+  types: [text]
+  entry: sed --in-place 's/[[:space:]]\+$//'
+
+- id: generic-check-for-binary-files
+  name: '[Generic] Check for binary files'
+  description: >
+    Detect binary files being commited.
+  language: python
+  files: .*
+  types: [file]
+  entry: generic-check-for-binary-files
+
+- id: generic-fix-end-of-files
+  name: '[Generic] Fix end of files'
+  description: >
+    Delete empty lines at the end of files.
+  language: python
+  files: .*
+  types: [text]
+  entry: generic-fix-end-of-files
+
+- id: terraform-format
+  name: '[TF] Terraform formatter'
+  description: Run terraform fmt against .tf files.
+  language: system
+  files: (\.tf)$
+  types: [file]
+  entry: terraform fmt -recursive

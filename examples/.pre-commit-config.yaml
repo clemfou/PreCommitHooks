@@ -1,0 +1,10 @@
+---
+repos:
+- repo: https://github.com/clemfou/PreCommitHooks
+  rev: vA.B.C # Tag or commit you want to point at
+  hooks:
+    # Delete checks you're not interested in
+    - id: generic-check-for-binary-files
+    - id: generic-fix-end-of-files
+    - id: generic-trailing-whitespaces
+    - id: terraform-format
