@@ -27,6 +27,15 @@
   types: [text]
   entry: generic-fix-end-of-files
 
+- id: generic-replace-tabs-with-spaces
+  name: '[Generic] Replace tabs with spaces'
+  description: >
+    Find tabs and replace them with spaces.
+  language: python
+  files: .*
+  types: [text]
+  entry: generic-replace-tabs-with-spaces
+
 - id: terraform-format
   name: '[TF] Terraform formatter'
   description: Run terraform fmt against .tf files.

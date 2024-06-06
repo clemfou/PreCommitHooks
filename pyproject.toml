@@ -11,6 +11,7 @@ python = "^3.9"
 [tool.poetry.scripts]
 generic-check-for-binary-files = "pre_commit_hooks.generic_check_for_binary_files:main"
 generic-fix-end-of-files = "pre_commit_hooks.generic_fix_end_of_files:main"
+generic-replace-tabs-with-spaces = "pre_commit_hooks.generic_replace_tabs_with_spaces:main"
 
 [build-system]
 requires = ["poetry-core"]

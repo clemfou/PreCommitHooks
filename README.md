@@ -11,8 +11,9 @@ repository.
 ### List of available hooks
 
 ```
-- id: generic-trailing-whitespaces
 - id: generic-check-for-binary-files
 - id: generic-fix-end-of-files
+- id: generic-replace-tabs-with-spaces
+- id: generic-trailing-whitespaces
 - id: terraform-format
 ```
