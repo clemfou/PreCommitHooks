@@ -10,4 +10,6 @@ repos:
     - id: generic-replace-tabs-with-spaces
       args: [--shiftwidth=8]
     - id: generic-trailing-whitespaces
+    - id: python-ruff-linter
+    - id: python-ruff-formatter
     - id: terraform-format

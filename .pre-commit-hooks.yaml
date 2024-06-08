@@ -45,6 +45,38 @@
   types: [text]
   entry: generic-replace-tabs-with-spaces
 
+- id: python-ruff-linter
+  name: '[Python] Run ruff check'
+  description: >
+    Run the ruff linter.
+  language: python
+  additional_dependencies:
+    - ruff
+  types:
+    - python
+  require_serial: true
+  entry: ruff check
+  args:
+    - --line-length=100
+    - --select=ALL
+    - --fix
+    - --show-fixes
+    - --no-unsafe-fixes
+
+- id: python-ruff-formatter
+  name: '[Python] Run ruff format'
+  description: >
+    Run the ruff formatter.
+  language: python
+  additional_dependencies:
+    - ruff
+  types:
+    - python
+  require_serial: true
+  entry: ruff format
+  args:
+    - --line-length=100
+
 - id: terraform-format
   name: '[TF] Terraform formatter'
   description: Run terraform fmt against .tf files.
