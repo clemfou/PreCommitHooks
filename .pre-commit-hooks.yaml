@@ -3,7 +3,7 @@
 - id: generic-trailing-whitespaces
   name: '[Generic] Remove trailing whitespaces'
   description: >
-    Remove trailing whitespaces from all files.
+    Remove trailing whitespaces from all text files.
   language: system
   files: .*
   types: [text]
