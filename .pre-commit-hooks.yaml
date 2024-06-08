@@ -57,8 +57,6 @@
   require_serial: true
   entry: ruff check
   args:
-    - --line-length=100
-    - --select=ALL
     - --fix
     - --show-fixes
     - --no-unsafe-fixes
