@@ -9,6 +9,15 @@
   types: [text]
   entry: sed --in-place 's/[[:space:]]\+$//'
 
+- id: generic-non-breaking-spaces
+  name: '[Generic] Remove nbsp characters'
+  description: >
+    Remove non-breaking spaces from all text files.
+  language: system
+  files: .*
+  types: [text]
+  entry: sed --in-place 's/\xC2\xA0/ /g'
+
 - id: generic-check-for-binary-files
   name: '[Generic] Check for binary files'
   description: >
