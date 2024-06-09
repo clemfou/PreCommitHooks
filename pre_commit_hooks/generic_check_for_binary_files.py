@@ -10,8 +10,13 @@ def is_binary(file_path: Path) -> bool:
         with file_path.open("rb") as file:
             chunk = file.read(512)
 
-            if b"\0" in chunk:
+            if not chunk:
+                # The file is probably empty
+                return False
+
+            if b"\x00" in chunk:
                 return True
+
         return False
 
     except IOError:
