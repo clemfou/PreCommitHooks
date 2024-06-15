@@ -8,7 +8,12 @@ from pathlib import Path
 def remove_empty_trailing_lines(file_path: Path) -> None:
     """Remove trailing lines."""
     with file_path.open("r+b") as file:
-        file.seek(0, os.SEEK_END)
+        try:
+            file.seek(-1, os.SEEK_END)
+
+        except IOError:
+            return
+
         position = file.tell()
 
         while position > 0:
