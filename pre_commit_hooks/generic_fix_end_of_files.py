@@ -25,8 +25,14 @@ def remove_empty_trailing_lines(file_path: Path) -> None:
 
             position -= 1
 
-        file.truncate(position)
-        file.write(b"\n")
+        if position == 0 and file.read(1) in (b"\n", b"\r"):
+            file.seek(0)
+            file.truncate(0)
+            file.write(b"\n")
+
+        else:
+            file.seek(position + 1)
+            file.truncate()
 
 
 def main():
