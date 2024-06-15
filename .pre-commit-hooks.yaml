@@ -57,6 +57,7 @@
   require_serial: true
   entry: ruff check
   args:
+    - --force-exclude
     - --fix
     - --show-fixes
     - --no-unsafe-fixes
@@ -73,6 +74,7 @@
   require_serial: true
   entry: ruff format
   args:
+    - --force-exclude
     - --line-length=100
 
 - id: terraform-format
