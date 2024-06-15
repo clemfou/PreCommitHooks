@@ -13,6 +13,19 @@ generic-check-for-binary-files = "pre_commit_hooks.generic_check_for_binary_file
 generic-fix-end-of-files = "pre_commit_hooks.generic_fix_end_of_files:main"
 generic-replace-tabs-with-spaces = "pre_commit_hooks.generic_replace_tabs_with_spaces:main"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D203", "D213", "ANN101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101"]
