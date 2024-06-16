@@ -84,3 +84,11 @@
   files: (\.tf)$
   types: [file]
   entry: terraform fmt -recursive
+
+- id: packer-format
+  name: '[HCL] Packer formatter'
+  description: Run packer fmt command against packer files.
+  language: python
+  files: \.(pkr\.hcl|pkrvars\.hcl)$
+  types: [file]
+  entry: packer-format

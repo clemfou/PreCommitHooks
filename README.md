@@ -16,6 +16,7 @@ repository.
 - id: generic-non-breaking-spaces
 - id: generic-replace-tabs-with-spaces
 - id: generic-trailing-whitespaces
+- id: packer-format
 - id: python-ruff-formatter
 - id: python-ruff-linter
 - id: terraform-format
