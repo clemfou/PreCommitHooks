@@ -13,6 +13,7 @@ generic-check-for-binary-files = "pre_commit_hooks.generic_check_for_binary_file
 generic-fix-end-of-files = "pre_commit_hooks.generic_fix_end_of_files:main"
 generic-replace-tabs-with-spaces = "pre_commit_hooks.generic_replace_tabs_with_spaces:main"
 packer-format = "pre_commit_hooks.packer_format:main"
+terraform-format = "pre_commit_hooks.terraform_format:main"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.2.2"

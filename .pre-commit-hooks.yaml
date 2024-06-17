@@ -80,10 +80,10 @@
 - id: terraform-format
   name: '[TF] Terraform formatter'
   description: Run terraform fmt against .tf files.
-  language: system
+  language: python
   files: (\.tf)$
   types: [file]
-  entry: terraform fmt -recursive
+  entry: terraform-format
 
 - id: packer-format
   name: '[HCL] Packer formatter'
